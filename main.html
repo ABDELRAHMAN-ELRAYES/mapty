@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <title>Mapty</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="reg-form">
+        <div class="reg-header">
+          <img src="logo.png" alt="" />
+        </div>
+        <form action="">
+          <div class="form-input first-input">
+            <label for="type">Type</label>
+            <select name="" id="type" class="type">
+              <option value="running">running</option>
+              <option value="walking">walking</option>
+            </select>
+          </div>
+          <div class="form-input">
+            <label for="distance">Distance</label>
+            <input type="text" placeholder="km" id="distance" />
+          </div>
+          <div class="form-input">
+            <label for="duration">Duration</label>
+            <input type="text" placeholder="min" id="duration" />
+          </div>
+          <div class="form-input cadence-div">
+            <label for="cadence">Cadence</label>
+            <input type="text" placeholder="step/min" id="cadence" />
+          </div>
+          <div class="form-input elevation-div deactivate">
+            <label for="elevation">Elev Gain</label>
+            <input type="text" placeholder="meters" id="elevation" />
+          </div>
+        </form>
+        <div class="records">
+          <div class="record walking-record"></div>
+
+          <div class="record running-record"></div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
